@@ -1,0 +1,21 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td,th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+input{
+    width:25%;
+    height:30px;
+    margin: 10px 0px;
+}
+
+tr:nth-child(even) {
+  background-color: #cccccc;
+}

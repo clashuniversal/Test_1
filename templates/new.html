@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body%}
+    <form action="/new" method="POST">
+        <label for="task"> Name of the Task </label><br>
+        <input type="text" name="task" id="task" placeholder="Name of the task"><br>
+        <label for="date"> Date to be reminded on </label><br>
+        <input type="datetime-local" name="date" id="date" placeholder="Date and Time of the task"><br>
+        <input type=submit>
+    </form>
+{% endblock %}
