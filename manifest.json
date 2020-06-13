@@ -1,5 +1,5 @@
 {
-    "name": "My Hello Chrome Extension",
+    "name": "Backend Ticket ID Fetcher",
     "version": "1.0",
     "manifest_version": 2,
     "content_scripts": [
