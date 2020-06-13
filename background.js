@@ -19,14 +19,12 @@ chrome.runtime.onMessage.addListener(
               resolve(cookies)
           })
           perfect_promise.then(function (response){
-           console.log(response)
-           console.log(cookies.length)
            var cookie = "";
            for(i=0 ; i < cookies.length ; i++){
             cookie = cookie+ " " + cookies[i].name + "=" + cookies[i].value + ";"
             
         }   
-        console.log(cookie)
+        //console.log(cookie)
         var api_call = new XMLHttpRequest();
 
     api_call.onreadystatechange=function(){
@@ -37,12 +35,11 @@ chrome.runtime.onMessage.addListener(
             //Serialize the xml response
             var xml_serialiser = new XMLSerializer();
             var serialzed_xml = xml_serialiser.serializeToString(api_call.responseXML)
-            //console.log(serialized_xml)
             var xml_parser = new DOMParser();
        var xml_response = api_call.responseXML
        var parsed_value = xml_parser.parseFromString(serialzed_xml,"text/xml");
              id = parsed_value.getElementsByTagName("id")[0].childNodes[0].nodeValue
-             console.log(id)
+             
         }
 
     };
@@ -57,18 +54,12 @@ chrome.runtime.onMessage.addListener(
       sendResponse({received: "This is background"});
         }
         else{
-            if(id == undefined){
-                console.log(modified_url[5])
-                sendResponse({received: "Please load the ticket page and then try"})
-                console.log("Message to Popup  script -  ID = "+id)
-            }
-            else{
-                console.log("Sending data to Popup")
-                console.log(modified_url[5])
-                sendResponse({received: id, display_id: modified_url[5]})
-            }
            
-            //console.log("Message Test")
+            
+                //console.log("Sending data to Popup")
+            
+                //console.log(modified_url[5])
+                sendResponse({received: id, display_id: modified_url[5]})
         }
     }
 );

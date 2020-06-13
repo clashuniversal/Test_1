@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var element_1 = document.getElementById("id")
     var element_2 = document.getElementById("current_display_id")
 
-    document.addEventListener("click", function(){
+    
         
         chrome.runtime.sendMessage({test: "From popup script"},function(response){
             element_1.innerHTML = response.received;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
 
     })
-})
+
 
     // chrome.tabs.query({url: "https://*.freshdesk.com/a/*", active: true, currentWindow: true} , function (tabs){
 //     document.getElementById("test").innerHTML = "Text is changed"
