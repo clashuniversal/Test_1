@@ -13,4 +13,4 @@ Things to take care when you use the extension:
 2. The extension will not work if you open the ticket on the same tab from list view, you have to open the ticket in a new tab
 3. Once you click the extension icon, whatever copied previously will be rewritten with the backend ticket ID.
 
-Please send in your feedback to prasadclasher@gmail.com , make sure to include the word Chrome-Extension-Feedback in the subject.
+Please send in your feedback to prasadclasher@gmail.com , make sure to include the word Backend-ticketid in the subject.
